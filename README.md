@@ -2,4 +2,4 @@ My work through [Structure and Interpretations of Computer Programs](https://mit
 
 I work with [Gambit Scheme](http://gambitscheme.org/wiki/index.php/Main_Page) here.
 
-Gambit Scheme can be installed via Homebrew with `brew install gambit-scheme`.
+Gambit Scheme can be installed via Homebrew with `brew install gambit-scheme` on Mac OSX.
