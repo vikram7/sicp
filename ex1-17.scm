@@ -21,12 +21,17 @@
 ;;; => (halve 2) * (double 6)
 ;;; => 1 * 12
 ;;; 3 * 5
-;;; 
+;;; => mult-iter 3 3 4
+;;; => mult-iter 3 6 2
+;;; => mult-iter 3 12 1
+;;; => mult-iter 15 12 0
+;;; => 15
 
 (define (mult a b)
-  (mult-iter a b 1))
+  (mult-iter 0 a b))
 
-(define (mult-iter a b product)
-  (cond (or (= a 0) (= b 0)) 0)
-        (
+(define (mult-iter accumulator a b)
+  (cond (or (= b 0) accumulator)
+        ((even? b) (mult-iter accumulator (double a) (halve b)))
+        (else (mult-iter (+ accumulator a) a (- b 1)))))
 
